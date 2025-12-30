@@ -120,7 +120,7 @@
     <!-- HERO SECTION -->
     <section
       id="home"
-      class="h-[120vh] flex items-center justify-start bg-center bg-cover relative"
+      class="relative min-h-screen flex items-center bg-center bg-cover"
       style="background-image: url('img/hero-bg.jpg')"
       data-aos="fade-up"
     >
@@ -131,42 +131,45 @@
 
       <!-- Content -->
       <div
-        class="relative z-10 text-left px-24 max-w-2xl"
+        class="relative z-10 max-w-2xl px-6 sm:px-12 lg:px-24 text-center lg:text-left"
         data-aos="fade-right"
       >
-        <h1
-          class="text-white text-5xl md:text-6xl font-bold tracking-wide mb-6"
-        >
-          <span class="opacity-70">Braids by</span><br />
+        <h1 class="text-white font-bold tracking-wide mb-6">
+          <span class="block text-3xl sm:text-4xl opacity-70"> Braids by </span>
+
           <span
-            class="text-[80px] md:text-5x1 text-luxeGold px-[110px]"
+            class="block text-5xl sm:text-6xl lg:text-7xl text-luxeGold"
             style="font-family: 'Flavellya', cursive"
           >
             AFRAH
           </span>
         </h1>
-        <br />
-        <p class="text-gray-300 text-lg md:text-xl mb-8">
+
+        <p
+          class="text-gray-300 text-base sm:text-lg lg:text-xl max-w-xl mx-auto lg:mx-0"
+        >
           Professional braiding with a luxurious touch – tailored for beauty,
           comfort & confidence.
         </p>
       </div>
     </section>
+
     <!--------Services ----->
     <section id="services" class="bg-black" data-aos="fade-up">
-      <div class="container">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-12">
         <div class="grid items-center">
-          <!-- Image Collage with Hover Overlay -->
+          <!-- Image Collage -->
           <div class="grid grid-cols-2 lg:grid-cols-4 gap-0 h-[100vh]">
-            <!-- Image 1 -->
-            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+            <!-- Service Item -->
+            <div class="relative overflow-hidden">
               <img
                 src="img/Braids.jpeg"
-                alt="Campus life"
+                alt="Box Braids"
                 class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
               />
+
               <div
-                class="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-black to-[#0a0a0a] opacity-0 hover:opacity-70 transition duration-500 ease-in-out flex items-center justify-center"
+                class="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-black to-[#0a0a0a] opacity-70 lg:opacity-0 lg:hover:opacity-70 transition duration-500 ease-in-out flex items-center justify-center"
               >
                 <h3
                   class="text-white text-2xl text-center"
@@ -177,15 +180,16 @@
               </div>
             </div>
 
-            <!-- Image 2 -->
-            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+            <!-- Service Item -->
+            <div class="relative overflow-hidden">
               <img
                 src="img/do(2).jpeg"
-                alt="Students studying"
+                alt="Cornrows"
                 class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
               />
+
               <div
-                class="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-black to-[#0a0a0a] opacity-0 hover:opacity-70 transition duration-500 ease-in-out flex items-center justify-center"
+                class="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-black to-[#0a0a0a] opacity-70 lg:opacity-0 lg:hover:opacity-70 transition duration-500 ease-in-out flex items-center justify-center"
               >
                 <h3
                   class="text-white text-2xl text-center"
@@ -196,15 +200,16 @@
               </div>
             </div>
 
-            <!-- Image 3 -->
-            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+            <!-- Service Item -->
+            <div class="relative overflow-hidden">
               <img
                 src="img/3.png"
-                alt="Classroom"
+                alt="Jumbo Braids"
                 class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
               />
+
               <div
-                class="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-black to-[#0a0a0a] opacity-0 hover:opacity-70 transition duration-500 ease-in-out flex items-center justify-center"
+                class="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-black to-[#0a0a0a] opacity-70 lg:opacity-0 lg:hover:opacity-70 transition duration-500 ease-in-out flex items-center justify-center"
               >
                 <h3
                   class="text-white text-2xl text-center"
@@ -215,15 +220,16 @@
               </div>
             </div>
 
-            <!-- Image 4 -->
-            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+            <!-- Service Item -->
+            <div class="relative overflow-hidden">
               <img
                 src="img/4.webp"
-                alt="Student"
+                alt="Twists"
                 class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
               />
+
               <div
-                class="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-black to-[#0a0a0a] opacity-0 hover:opacity-70 transition duration-500 ease-in-out flex items-center justify-center"
+                class="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-black to-[#0a0a0a] opacity-70 lg:opacity-0 lg:hover:opacity-70 transition duration-500 ease-in-out flex items-center justify-center"
               >
                 <h3
                   class="text-white text-2xl text-center"
@@ -271,7 +277,7 @@
 
             <a
               href="#booking"
-              class="inline-block px-6 py-3 rounded-full border border-luxeRed text-luxeRed transition-all duration-500 group-hover:bg-luxeRed group-hover:text-yellow-800"
+              class="inline-block px-6 py-3 text-luxeRed transition-all duration-500 group-hover:bg-luxeRed group-hover:text-yellow-800"
             >
               Book Now →
             </a>
@@ -296,7 +302,7 @@
             </p>
             <a
               href="#booking"
-              class="inline-block px-6 py-3 rounded-full border border-luxeRed text-luxeRed transition group-hover:bg-luxeRed group-hover:text-yellow-800"
+              class="inline-block px-6 py-3 text-luxeRed transition group-hover:bg-luxeRed group-hover:text-yellow-800"
             >
               Book Now →
             </a>
@@ -321,7 +327,7 @@
             </p>
             <a
               href="#booking"
-              class="inline-block px-6 py-3 rounded-full border border-luxeRed text-luxeRed transition group-hover:bg-luxeRed group-hover:text-yellow-800"
+              class="inline-block px-6 py-3 text-luxeRed transition group-hover:bg-luxeRed group-hover:text-yellow-800"
             >
               Book Now →
             </a>
@@ -346,7 +352,7 @@
             </p>
             <a
               href="#booking"
-              class="inline-block px-6 py-3 rounded-full border border-luxeRed text-luxeRed transition group-hover:bg-luxeRed group-hover:text-yellow-800"
+              class="inline-block px-6 py-3 text-luxeRed transition group-hover:bg-luxeRed group-hover:text-yellow-800"
             >
               Book Now →
             </a>
@@ -442,68 +448,68 @@
 
     <!----Gallery-->
     <section class="bg-black py-20" data-aos="fade-up">
-      <div class="container mx-auto px-6 lg:px-12">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-12">
         <div class="grid items-center">
-          <!-- Right Image Collage with Hover Overlay -->
-          <div class="grid grid-cols-3 gap-0 h-[190vh]">
-            <!-- Image Wrapper Template -->
-            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+          <!-- Responsive Image Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+            <!-- Image Wrapper -->
+            <div class="relative overflow-hidden aspect-square">
               <img
                 src="img/pic1.jpeg"
                 class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
               />
             </div>
 
-            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+            <div class="relative overflow-hidden aspect-square">
               <img
                 src="img/pic2.jpeg"
                 class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
               />
             </div>
 
-            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+            <div class="relative overflow-hidden aspect-square">
               <img
                 src="img/pic3.jpeg"
                 class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
               />
             </div>
 
-            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+            <div class="relative overflow-hidden aspect-square">
               <img
                 src="img/pic4.jpeg"
                 class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
               />
             </div>
 
-            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+            <div class="relative overflow-hidden aspect-square">
               <img
                 src="img/pic5.jpeg"
                 class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
               />
             </div>
 
-            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+            <div class="relative overflow-hidden aspect-square">
               <img
                 src="img/pic6.jpeg"
                 class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
               />
             </div>
 
-            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+            <div class="relative overflow-hidden aspect-square">
               <img
                 src="img/pic7.jpeg"
                 class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
               />
             </div>
 
-            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+            <div class="relative overflow-hidden aspect-square">
               <img
                 src="img/pic8.jpeg"
                 class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
               />
             </div>
 
-            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+            <div class="relative overflow-hidden aspect-square">
               <img
                 src="img/pic9.jpeg"
                 class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
@@ -513,6 +519,7 @@
         </div>
       </div>
     </section>
+
     <section
       class="relative text-white py-24 overflow-hidden"
       data-aos="fade-up"
