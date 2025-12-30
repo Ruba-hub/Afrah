@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Braids by Afrah</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <script>
+      module.exports = {
+        content: ["./index.html", "./src/**/*.{html,js}"],
+        darkMode: "class", // enable dark mode
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Poppins", "sans-serif"],
+            },
+            colors: {
+              luxeRed: "#8c1d23",
+              luxeBlack: "#0a0a0a",
+              luxeGray: "#1c1c1c",
+              luxeGold: "#d4af37",
+            },
+            boxShadow: {
+              soft: "0 10px 25px rgba(0,0,0,0.4)",
+            },
+          },
+        },
+        plugins: [],
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+
+      .neon-text {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ffd700,
+          0 0 30px #ffd700, 0 0 40px #ffd700, 0 0 55px #ffd700, 0 0 75px #ffd700;
+      }
+      .hero-slide {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transform: scale(1);
+        transition: opacity 1.5s ease-in-out;
+        animation: heroZoom 8s ease-in-out infinite;
+      }
+      @font-face {
+        font-family: "Flavellya";
+        src: url("/fonts/Flavellya.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      /* Slow zoom animation */
+      @keyframes heroZoom {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(1.12);
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-black text-gray-900">
+    <!-- NAVBAR -->
+    <header
+      class="fixed top-0 left-0 w-full z-50 bg-black/40 backdrop-blur-md shadow-lg"
+    >
+      <div class="max-w-7xl mx-auto relative px-6 py-4 flex items-center">
+        <!-- Logo (CENTERED) -->
+        <h1
+          class="absolute left-1/2 -translate-x-1/2 text-white text-xl tracking-widest uppercase"
+        >
+          <span class="opacity-70">Braids by</span><br />
+          <span
+            class="text-4xl md:text-5x1 text-luxeGold"
+            style="font-family: 'Flavellya', cursive"
+          >
+            Afrah
+          </span>
+        </h1>
+
+        <!-- Button (RIGHT – desktop only) -->
+        <a
+          href="#booking"
+          class="ml-auto hidden md:inline-block bg-luxeRed text-white px-5 py-2 rounded-lg hover:opacity-70 transition duration-500 ease-in-out flex"
+        >
+          Book Now
+        </a>
+
+        <!-- Mobile Menu Icon (RIGHT) -->
+        <div class="md:hidden ml-auto text-gray-300 text-3xl cursor-pointer">
+          &#9776;
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section
+      id="home"
+      class="h-[120vh] flex items-center justify-start bg-center bg-cover relative"
+      style="background-image: url('img/hero-bg.jpg')"
+      data-aos="fade-up"
+    >
+      <!-- Dark Overlay -->
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90"
+      ></div>
+
+      <!-- Content -->
+      <div
+        class="relative z-10 text-left px-24 max-w-2xl"
+        data-aos="fade-right"
+      >
+        <h1
+          class="text-white text-5xl md:text-6xl font-bold tracking-wide mb-6"
+        >
+          <span class="opacity-70">Braids by</span><br />
+          <span
+            class="text-[80px] md:text-5x1 text-luxeGold px-[110px]"
+            style="font-family: 'Flavellya', cursive"
+          >
+            AFRAH
+          </span>
+        </h1>
+        <br />
+        <p class="text-gray-300 text-lg md:text-xl mb-8">
+          Professional braiding with a luxurious touch – tailored for beauty,
+          comfort & confidence.
+        </p>
+      </div>
+    </section>
+    <!--------Services ----->
+    <section id="services" class="bg-black" data-aos="fade-up">
+      <div class="container">
+        <div class="grid items-center">
+          <!-- Image Collage with Hover Overlay -->
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-0 h-[100vh]">
+            <!-- Image 1 -->
+            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+              <img
+                src="img/Braids.jpeg"
+                alt="Campus life"
+                class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-black to-[#0a0a0a] opacity-0 hover:opacity-70 transition duration-500 ease-in-out flex items-center justify-center"
+              >
+                <h3
+                  class="text-white text-2xl text-center"
+                  style="font-family: 'Flavellya', cursive"
+                >
+                  Box Braids
+                </h3>
+              </div>
+            </div>
+
+            <!-- Image 2 -->
+            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+              <img
+                src="img/do(2).jpeg"
+                alt="Students studying"
+                class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-black to-[#0a0a0a] opacity-0 hover:opacity-70 transition duration-500 ease-in-out flex items-center justify-center"
+              >
+                <h3
+                  class="text-white text-2xl text-center"
+                  style="font-family: 'Flavellya', cursive"
+                >
+                  Cornrows
+                </h3>
+              </div>
+            </div>
+
+            <!-- Image 3 -->
+            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+              <img
+                src="img/3.png"
+                alt="Classroom"
+                class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-black to-[#0a0a0a] opacity-0 hover:opacity-70 transition duration-500 ease-in-out flex items-center justify-center"
+              >
+                <h3
+                  class="text-white text-2xl text-center"
+                  style="font-family: 'Flavellya', cursive"
+                >
+                  Jumbo Braids
+                </h3>
+              </div>
+            </div>
+
+            <!-- Image 4 -->
+            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+              <img
+                src="img/4.webp"
+                alt="Student"
+                class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-black to-[#0a0a0a] opacity-0 hover:opacity-70 transition duration-500 ease-in-out flex items-center justify-center"
+              >
+                <h3
+                  class="text-white text-2xl text-center"
+                  style="font-family: 'Flavellya', cursive"
+                >
+                  Twists
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Services -->
+    <section class="py-24 bg-black text-white" data-aos="fade-up">
+      <div class="container mx-auto px-6" data-aos="fade-right">
+        <h2 class="text-4xl font-bold text-center mb-8 tracking-wide">
+          Our Services
+        </h2>
+        <div class="mt-8 flex justify-center">
+          <span class="w-20 h-1 bg-yellow-800 rounded-full"></span>
+        </div>
+        <br />
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <!-- Card -->
+          <div
+            class="group text-center bg-[#0b0b0b] p-8 rounded-xl border border-white/10 transition-all duration-500 hover:-translate-y-3 hover:border-luxeRed/60 hover:shadow-[0_0_25px_rgba(247,148,29,0.25)]"
+          >
+            <h3
+              class="text-2xl font-semibold mb-4 transition group-hover:text-luxeRed"
+            >
+              Box Braids
+            </h3>
+
+            <p class="text-white/70 mb-6">
+              Beautiful, long-lasting braids perfect for any occasion.
+            </p>
+
+            <p
+              class="text-luxeRed font-bold text-2xl mb-6 transition group-hover:scale-110"
+            >
+              $50
+            </p>
+
+            <a
+              href="#booking"
+              class="inline-block px-6 py-3 rounded-full border border-luxeRed text-luxeRed transition-all duration-500 group-hover:bg-luxeRed group-hover:text-yellow-800"
+            >
+              Book Now →
+            </a>
+          </div>
+
+          <!-- Cornrows -->
+          <div
+            class="group text-center bg-[#0b0b0b] p-8 rounded-xl border border-white/10 transition-all duration-500 hover:-translate-y-3 hover:border-luxeRed/60 hover:shadow-[0_0_25px_rgba(247,148,29,0.25)]"
+          >
+            <h3
+              class="text-2xl font-semibold mb-4 group-hover:text-luxeRed transition"
+            >
+              Cornrows
+            </h3>
+            <p class="text-white/70 mb-6">
+              Elegant and versatile cornrow styles that protect natural hair.
+            </p>
+            <p
+              class="text-luxeRed font-bold text-2xl mb-6 group-hover:scale-110 transition"
+            >
+              $40
+            </p>
+            <a
+              href="#booking"
+              class="inline-block px-6 py-3 rounded-full border border-luxeRed text-luxeRed transition group-hover:bg-luxeRed group-hover:text-yellow-800"
+            >
+              Book Now →
+            </a>
+          </div>
+
+          <!-- Jumbo Braids -->
+          <div
+            class="group text-center bg-[#0b0b0b] p-8 rounded-xl border border-white/10 transition-all duration-500 hover:-translate-y-3 hover:border-luxeRed/60 hover:shadow-[0_0_25px_rgba(247,148,29,0.25)]"
+          >
+            <h3
+              class="text-2xl font-semibold mb-4 group-hover:text-luxeRed transition"
+            >
+              Jumbo Braids
+            </h3>
+            <p class="text-white/70 mb-6">
+              Thick, chunky braids for a bold and confident look.
+            </p>
+            <p
+              class="text-luxeRed font-bold text-2xl mb-6 group-hover:scale-110 transition"
+            >
+              $60
+            </p>
+            <a
+              href="#booking"
+              class="inline-block px-6 py-3 rounded-full border border-luxeRed text-luxeRed transition group-hover:bg-luxeRed group-hover:text-yellow-800"
+            >
+              Book Now →
+            </a>
+          </div>
+
+          <!-- Twists -->
+          <div
+            class="group text-center bg-[#0b0b0b] p-8 rounded-xl border border-white/10 transition-all duration-500 hover:-translate-y-3 hover:border-luxeRed/60 hover:shadow-[0_0_25px_rgba(247,148,29,0.25)]"
+          >
+            <h3
+              class="text-2xl font-semibold mb-4 group-hover:text-luxeRed transition"
+            >
+              Twists
+            </h3>
+            <p class="text-white/70 mb-6">
+              Soft, defined twists that add texture and volume.
+            </p>
+            <p
+              class="text-luxeRed font-bold text-2xl mb-6 group-hover:scale-110 transition"
+            >
+              $45
+            </p>
+            <a
+              href="#booking"
+              class="inline-block px-6 py-3 rounded-full border border-luxeRed text-luxeRed transition group-hover:bg-luxeRed group-hover:text-yellow-800"
+            >
+              Book Now →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCHEDULING (MAJOR SECTION) -->
+    <section
+      id="booking"
+      class="relative h-screen flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8"
+      data-aos="fade-up"
+    >
+      <!-- Background -->
+      <div
+        class="absolute inset-0 bg-cover bg-center"
+        style="background-image: url('img/bg2.webp')"
+      ></div>
+      <div class="absolute inset-0 bg-black opacity-70"></div>
+
+      <!-- Content -->
+      <div class="relative z-10 max-w-5xl w-full text-white">
+        <h1
+          class="text-5xl sm:text-6xl font-extrabold tracking-tight mb-4"
+          data-aos="fade-right"
+        >
+          Change Your Hairstyle
+        </h1>
+
+        <p class="text-lg mb-12 text-gray-300" data-aos="fade-right">
+          Request an appointment and give yourself a new look!
+        </p>
+
+        <!-- Two-column layout -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-[30%]">
+          <!-- LEFT: Form -->
+          <form class="space-y-4" data-aos="fade-right">
+            <input
+              type="text"
+              placeholder="Name"
+              class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 placeholder-gray-400 text-white"
+            />
+
+            <input
+              type="email"
+              placeholder="Email"
+              class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-400 placeholder-gray-400 text-white"
+            />
+
+            <a
+              href="https://wa.me/256760115415?text=Hello%2C%20I%27d%20like%20to%20book%20an%20appointment"
+              target="_blank"
+              class="flex items-center justify-center gap-3 w-full py-3 mt-6 rounded-lg font-semibold text-white bg-black hover:bg-green-600 transition shadow-lg"
+            >
+              <i class="fab fa-whatsapp text-2xl"></i>
+              Contact on WhatsApp
+            </a>
+          </form>
+
+          <!-- RIGHT: Working Hours -->
+          <div class="bg-transparent text-gray-300" data-aos="fade-left">
+            <h1
+              class="text-2xl font-semibold text-white mb-8 bg-white/10 backdrop-blur px-4 py-2 rounded-lg inline-block"
+            >
+              Working Hours
+            </h1>
+
+            <p>Monday – Friday: 8:00 AM – 6:00 PM</p>
+            <p>Saturday: 9:00 AM – 5:00 PM</p>
+            <p>Sunday: Closed</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-black text-white py-20" data-aos="fade-up">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-4xl sm:text-5xl font-extrabold mb-6 tracking-tight">
+          Our Signature Styles
+        </h2>
+
+        <p class="text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto">
+          Every braid tells a story. Explore our gallery to see the creativity,
+          precision, and passion behind every hairstyle we create.
+        </p>
+
+        <!-- Accent line -->
+        <div class="mt-8 flex justify-center">
+          <span class="w-20 h-1 bg-yellow-800 rounded-full"></span>
+        </div>
+      </div>
+    </section>
+
+    <!----Gallery-->
+    <section class="bg-black py-20" data-aos="fade-up">
+      <div class="container mx-auto px-6 lg:px-12">
+        <div class="grid items-center">
+          <!-- Right Image Collage with Hover Overlay -->
+          <div class="grid grid-cols-3 gap-0 h-[190vh]">
+            <!-- Image Wrapper Template -->
+            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+              <img
+                src="img/pic1.jpeg"
+                class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+              />
+            </div>
+
+            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+              <img
+                src="img/pic2.jpeg"
+                class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+              />
+            </div>
+
+            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+              <img
+                src="img/pic3.jpeg"
+                class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+              />
+            </div>
+
+            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+              <img
+                src="img/pic4.jpeg"
+                class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+              />
+            </div>
+
+            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+              <img
+                src="img/pic5.jpeg"
+                class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+              />
+            </div>
+
+            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+              <img
+                src="img/pic6.jpeg"
+                class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+              />
+            </div>
+
+            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+              <img
+                src="img/pic7.jpeg"
+                class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+              />
+            </div>
+
+            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+              <img
+                src="img/pic8.jpeg"
+                class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+              />
+            </div>
+
+            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+              <img
+                src="img/pic9.jpeg"
+                class="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="relative text-white py-24 overflow-hidden"
+      data-aos="fade-up"
+    >
+      <!-- Background image -->
+      <div
+        class="absolute inset-0 bg-cover bg-center z-0"
+        style="background-image: url('img/1.png')"
+      ></div>
+
+      <!-- Dark overlay -->
+      <div class="absolute inset-0 bg-black opacity-70 z-10"></div>
+
+      <!-- Content -->
+      <div class="relative z-20 max-w-5xl mx-auto px-6 text-center">
+        <h2 class="text-4xl sm:text-5xl font-extrabold mb-6 tracking-tight">
+          More Than Just Braids
+        </h2>
+
+        <!-- Accent line -->
+        <div class="flex justify-center mb-8">
+          <span class="w-20 h-1 bg-yellow-800 rounded-full"></span>
+        </div>
+
+        <p
+          class="text-gray-300 text-lg leading-relaxed max-w-3xl mx-auto mb-10"
+        >
+          At Braids by Afrah, every style is crafted with patience, precision,
+          and genuine care. We don’t just braid hair — we enhance confidence,
+          protect natural beauty, and create looks that feel as good as they
+          look.
+        </p>
+
+        <p class="text-gray-400 text-md leading-relaxed max-w-2xl mx-auto">
+          Whether you want something bold, elegant, or effortlessly natural,
+          your comfort, time, and satisfaction always come first.
+        </p>
+
+        <!-- Soft CTA -->
+        <div class="mt-12">
+          <a
+            href="#booking"
+            class="inline-block px-8 py-4 rounded-full border border-luxeRed text-luxeRed font-semibold transition-all duration-500 hover:bg-luxeRed hover:text-yellow-800"
+          >
+            Book Your Experience
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section
+      id="contact"
+      class="bg-gradient-to-r from-[#0a0a0a] via-black to-[#343434] text-white py-10"
+    >
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+            <p>+25600000000</p>
+            <p>
+              Email:
+              <a
+                href="mailto:braidluxe@example.com"
+                class="underline hover:text-luxeRed transition"
+                >braidluxe@example.com</a
+              >
+            </p>
+            <p>Toronto</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+            <a href="#" class="block hover:text-luxeRed transition"
+              >Instagram</a
+            >
+            <a href="#" class="block hover:text-luxeRed transition">Facebook</a>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Working Hours</h3>
+            <p>Monday – Friday: 8:00 AM – 6:00 PM</p>
+            <p>Saturday: 9:00 AM – 5:00 PM</p>
+            <p>Sunday: Closed</p>
+          </div>
+        </div>
+        <div class="text-center mt-8 border-t border-gray-700 pt-4">
+          <p>&copy; 2025 Braids by Afrah. All rights reserved.</p>
+        </div>
+      </div>
+    </section>
+    <script>
+      const slides = document.querySelectorAll(".hero-slide");
+
+      const textData = [
+        {
+          title: "Luxe Braids Crafted With Precision",
+          desc: "Professional braiding with a luxurious touch – tailored for beauty, comfort & confidence.",
+        },
+        {
+          title: "Protective Styles That Elevate Your Look",
+          desc: "Experience neat, long-lasting braids designed to suit your personality.",
+        },
+        {
+          title: "Beauty Begins With Great Braiding",
+          desc: "Enhance your natural beauty with stylish, clean, and modern braid styles.",
+        },
+        {
+          title: "Book Your Next Stunning Hairstyle",
+          desc: "Fast, professional, and flawless braiding services—because you deserve the best.",
+        },
+      ];
+
+      let index = 0;
+
+      function changeSlide() {
+        // Hide all
+        slides.forEach((slide) => {
+          slide.style.opacity = 0;
+          slide.style.animation = "none"; // restart animation
+          void slide.offsetWidth; // force reflow
+          slide.style.animation = "heroZoom 8s ease-in-out infinite";
+        });
+
+        // Show current slide
+        slides[index].style.opacity = 1;
+
+        // Update text
+        document.querySelector("#heroText h1").textContent =
+          textData[index].title;
+        document.querySelector("#heroText p").textContent =
+          textData[index].desc;
+
+        // Move to next
+        index = (index + 1) % slides.length;
+      }
+
+      // First run
+      changeSlide();
+
+      // Change every 5 seconds
+      setInterval(changeSlide, 5000);
+    </script>
+
+    <script>
+      AOS.init({
+        duration: 1000, // animation duration in ms
+        once: true, // animation happens only once
+      });
+    </script>
+  </body>
+</html>
